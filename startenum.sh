@@ -59,9 +59,9 @@ netpath=network.out
 echo -e  "\n===NETWORK INFORMATION @ $dirname===\n" > $netpath
 
 echo -e  "\n==IFCONFIG==\n" >> $netpath
-ifconfig -a >> $netpath
+ip addr >> $netpath
 echo -e  "\n==ARP==\n" >> $netpath
-arp -an >>$netpath
+ip neigh >>$netpath
 echo -e  "\n==NETSTAT==\n" >> $netpath
 netstat -antup >> $netpath
 echo -e  "\n==IPTABLES==\n" >> $netpath
@@ -79,8 +79,7 @@ procpath=process.out
 echo -e  "\n===PROCESS INFORMATION @ $dirname===\n" > $procpath
 echo -e  "\n==Process Tree==\n" >> $procpath
 ps -aux >> $procpath
-echo -e  "\n==Service Status==\n" >> $procpath
-service --status-all >> $procpath
+
 
 
 # File Enumeration
