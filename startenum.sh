@@ -66,9 +66,6 @@ echo -e  "\n==NETSTAT==\n" >> $netpath
 netstat -antup >> $netpath
 echo -e  "\n==IPTABLES==\n" >> $netpath
 sudo iptables -L >> $netpath
-echo -e  "\n==lsof for ipv4/6==\n" >> $netpath
-lsof -i 4 >> $netpath
-lsof -i 6 >> $netpath
 echo -e  "\n==DNS==\n" >> $netpath
 cat /etc/hosts >>$netpath
 cat /etc/resolv.conf >>$netpath
